@@ -1,38 +1,13 @@
-package com.loadbalancer.strategy;
 
-import com.loadbalancer.server.BackendServer;
+
 import java.util.List;
 
-/**
- * Weighted Load Balancing Strategy.
- * 
- * Algorithm:
- * 1. Each server has a weight (e.g., 1, 2, 3)
- * 2. Server with weight 3 gets 3x more requests than weight 1 server
- * 3. Uses modulo-based weighted distribution
- * 
- * Time Complexity: O(n) worst case
- * Space Complexity: O(1)
- * 
- * Pros: Accommodates heterogeneous servers with different capacities
- * Cons: Requires weight configuration, slightly more complex
- * 
- * Example:
- * - Server A (weight=1): Gets 1/6 of requests
- * - Server B (weight=2): Gets 2/6 of requests  
- * - Server C (weight=3): Gets 3/6 of requests
- * Total weight = 6
- */
+
 public class WeightedRoundRobinStrategy implements LoadBalancingStrategy {
     private final int[] weights;
     private int currentIndex = 0;
 
-    /**
-     * Creates weighted round-robin strategy.
-     * Note: In production, weights would come from configuration.
-     * 
-     * @param servers List of servers - weights derived from order
-     */
+   
     public WeightedRoundRobinStrategy(List<BackendServer> servers) {
         // Default weights: 1, 2, 3, 1, 2, 3, ...
         this.weights = new int[servers.size()];

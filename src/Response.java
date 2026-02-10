@@ -1,6 +1,5 @@
-package com.loadbalancer.request;
 
-import com.loadbalancer.server.BackendServer;
+
 
 /**
  * Represents a response from a backend server.

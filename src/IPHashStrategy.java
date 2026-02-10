@@ -1,6 +1,5 @@
-package com.loadbalancer.strategy;
 
-import com.loadbalancer.server.BackendServer;
+
 import java.util.List;
 
 
@@ -33,12 +32,7 @@ public class IPHashStrategy implements LoadBalancingStrategy {
         return null;
     }
 
-    /**
-     * Simulates getting client IP address.
-     * In production, would extract from HTTP request headers.
-     * 
-     * @return Simulated client IP
-     */
+    
     private String getClientIP() {
         // Simulate a range of client IPs
         return "192.168." + (int)(Math.random() * 256) + "." + (int)(Math.random() * 256);

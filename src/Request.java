@@ -1,8 +1,6 @@
-package com.loadbalancer.request;
 
-/**
- * Represents a client request that needs to be routed to a backend server.
- */
+
+
 public class Request {
     private final String id;
     private final String path;
@@ -10,14 +8,7 @@ public class Request {
     private final long timestamp;
     private final Object payload;
 
-    /**
-     * Creates a new request.
-     * 
-     * @param id Unique request identifier
-     * @param path Request path/endpoint
-     * @param method HTTP method (GET, POST, etc.)
-     * @param payload Request payload
-     */
+   
     public Request(String id, String path, String method, Object payload) {
         this.id = id;
         this.path = path;
