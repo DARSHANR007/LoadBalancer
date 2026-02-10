@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Java Load Balancer
 
 A comprehensive implementation of a load balancer in Java that demonstrates core algorithms and design patterns for distributing incoming client requests across multiple backend servers.
@@ -246,3 +247,20 @@ public class IPHashStrategy implements LoadBalancingStrategy {
 ## License
 
 MIT License - Educational use
+=======
+This project implements a basic load balancer using Java.
+It forwards incoming client requests to multiple backend servers to distribute load evenly.
+
+The load balancer uses a round-robin strategy to choose the next available server.
+It maintains a list of backend servers and routes requests sequentially.
+
+This project helps in understanding:
+
+How load balancers work internally
+
+Request routing logic
+
+Server selection strategies
+
+Basic fault handling when a server is unavailable
+>>>>>>> 4609287be232e45e02c8a48290bc91ca8aedfad7
